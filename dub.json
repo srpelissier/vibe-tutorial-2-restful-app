@@ -1,0 +1,10 @@
+{
+	"name": "vibed-mongo",
+	"description": "A simple vibe.d server application.",
+	"copyright": "Copyright © 2015, Sylvain,,,",
+	"authors": ["Sylvain,,,"],
+	"dependencies": {
+		"vibe-d": "~>0.7.23"
+	},
+	"versions": ["VibeDefaultMain"]
+}
