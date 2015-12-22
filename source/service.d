@@ -14,14 +14,6 @@ class MongoService
     this.title = title;
   }
 
-  void test(HTTPServerRequest req, HTTPServerResponse res)
-  {
-    logInfo("MongoService: TEST");
-    //res.writeBody("TEST");
-    res.writeJsonBody(collection.find!Json.array);
-  }
-
-
   void index()
   {
     logInfo("MongoService: GET /");
@@ -51,7 +43,6 @@ class MongoService
   {
     logInfo("MongoService : GET /users/userlist");
     res.writeJsonBody(collection.find!Json.array);
-    //return Json(collection.find!Json.array);
   }
 
   @path("deleteuser/:id")
@@ -62,4 +53,9 @@ class MongoService
     collection.remove(["_id": _id]);
     res.writeBody("");
   }
+}
+
+unittest
+{
+  assert(true);
 }
